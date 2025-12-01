@@ -24,7 +24,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             S1131212Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    RoleScreen(
+                    // 顯示 ServiceScreen (包含 RoleScreen + 掉落服務圖示)
+                    ServiceScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -35,8 +36,8 @@ class MainActivity : ComponentActivity() {
 
 @Preview(showBackground = true)
 @Composable
-fun RoleScreenPreview() {
+fun ServiceScreenPreview() {
     S1131212Theme {
-        RoleScreen()
+        ServiceScreen()
     }
 }

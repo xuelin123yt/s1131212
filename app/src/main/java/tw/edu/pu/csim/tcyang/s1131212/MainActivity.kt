@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             S1131212Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ExamScreen(
+                    RoleScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -35,8 +35,8 @@ class MainActivity : ComponentActivity() {
 
 @Preview(showBackground = true)
 @Composable
-fun ExamScreenPreview() {
+fun RoleScreenPreview() {
     S1131212Theme {
-        ExamScreen()
+        RoleScreen()
     }
 }

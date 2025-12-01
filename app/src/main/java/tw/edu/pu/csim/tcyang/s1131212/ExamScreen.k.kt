@@ -79,9 +79,14 @@ fun ExamScreen(
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            // 成績
+            // 成績（在括號內顯示碰撞訊息）
+            val scoreText = if (viewModel.msg.isNotEmpty()) {
+                "成績：${viewModel.score}分 (${viewModel.msg})"
+            } else {
+                "成績：${viewModel.score}分"
+            }
             Text(
-                text = "成績：${viewModel.score}分",
+                text = scoreText,
                 color = Color.Black,
                 fontSize = 16.sp
             )

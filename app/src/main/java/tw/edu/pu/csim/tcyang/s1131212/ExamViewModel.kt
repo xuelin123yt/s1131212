@@ -32,6 +32,10 @@ class ExamViewModel(application: Application) : AndroidViewModel(application) {
     var score by mutableIntStateOf(0)
         private set
 
+    // 碰撞訊息
+    var msg by mutableStateOf("")
+        private set
+
     init {
         // 取得螢幕尺寸（單位：px）
         val displayMetrics = application.resources.displayMetrics
@@ -49,6 +53,11 @@ class ExamViewModel(application: Application) : AndroidViewModel(application) {
     // 更新成績
     fun updateScore(newScore: Int) {
         score = newScore
+    }
+
+    // 更新碰撞訊息
+    fun updateMsg(newMsg: String) {
+        msg = newMsg
     }
 }
 
